@@ -1,0 +1,24 @@
+<div id="Phones" class="container mt-5" style="background-color: white">
+  <h1 class="text-center text-dark fw-bold mb-4 mt-5">
+  </h1>
+  <div class="row row-cols-1 row-cols-md-4 mt-5 mb-3 g-4">
+    <div class="col" *ngFor="let item of phone" style="padding-top: 5%;" >
+      <div class="card h-100" style="background-color: white; border-radius: 20px; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;">
+        <div class="card-body text-center p-3">
+          <img [src]="item.img" class="card-img-top" [alt]="item.name" style="border-radius: 20px 20px 0 0; height: 200px; object-fit: cover;">
+          <h5 class="card-title text-center text-capitalize fw-bold text-dark">{{item.name}}</h5>
+          <p class="text-dark">{{item.description}}</p>
+        </div>
+        <div class="card-footer bg-transparent border-top-0 d-flex justify-content-between align-items-center">
+          <div>
+            <h5 class="fw-bold text-primary">SAR {{item.price}}</h5>
+          </div>
+          <div>
+            <button class="btn btn-primary me-2" [routerLink]="['/phonedetails',item.id]">Show Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

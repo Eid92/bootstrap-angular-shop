@@ -1,0 +1,70 @@
+/* Navbar Styles */
+.navbar {
+    height: 100px;
+    font-size: 1.3rem;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    transition: 0.4s;
+  }
+  
+  .navbar-brand {
+    margin-left: 115px;
+    font-weight: 700;
+    color: black;
+    font-size: 2.3rem;
+    transition: 0.3s color;
+  }
+  
+  .navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+    margin-left: 5px;
+  }
+  
+  .navbar-toggler:focus,
+  .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .nav-item {
+    margin: 0.8rem 0.4rem;
+  }
+  
+  .nav-link {
+    color: black;
+    font-size: 1.3rem;
+    margin: 0.8rem 1.5rem;
+    position: relative;
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    color:  rgb(51, 115, 175);
+  }
+  
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    width: 100%;
+    visibility: visible;
+  }
+  
+  /* Offcanvas Navbar */
+  #offcanvasNavbar {
+    background-color: #22282a;
+  }
+  
